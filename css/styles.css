@@ -1,0 +1,116 @@
+body {
+  color: green;
+  text-align: center;
+  scroll-behavior: smooth;
+}
+
+p,
+h3,
+li {
+  color: red;
+  text-align: center;
+  font-size: 60px;
+}
+/* can do li.happy */
+
+body div .content {
+  border: 2px solid purple;
+}
+
+.mybox {
+  width: 300px;
+  height: 300px;
+  background: red;
+  transform: translate(100px, 200px) rotate(45deg);
+}
+
+.moveBox {
+  width: 300px;
+  height: 300px;
+  background-color: black;
+  transition: width 5s, background-color 5s, border-radius 5s;
+  /* animate for 3s when width changes */
+}
+
+.moveBox:hover {
+  width: 100%;
+  /* mouse over box, width changes, causes smooth transition */
+  border-radius: 50%;
+  background-color: yellow;
+}
+
+.animateBox {
+  width: 300px;
+  height: 300px;
+  background-color: red;
+  animation-name: example2;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  /* can be done on one line called animation, such as padding and padding-top */
+}
+
+@keyframes example {
+  from {
+    background-color: red;
+  }
+  to {
+    background-color: yellow;
+  }
+}
+
+@keyframes example2 {
+  0% {
+    width: 300px;
+  }
+  25% {
+    width: 600px;
+  }
+  50% {
+    width: 300px;
+  }
+  75% {
+    width: 600px;
+  }
+  100% {
+    width: 300px;
+  }
+}
+
+table th:nth-child(odd),
+table td:nth-child(odd) {
+  background: red;
+}
+
+table td:nth-child(even) {
+  background: blue;
+}
+
+ul.nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+ul.nav li {
+  float: left;
+  border-right: 2px solid #bbb;
+}
+
+ul.nav li a {
+  color: white;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+}
+
+ul.nav li:last-child {
+  border-right: none;
+}
+
+ul.nav li a:hover,
+ul.nav li a.active {
+  background-color: #097e44;
+}
